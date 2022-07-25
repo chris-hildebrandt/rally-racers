@@ -7,11 +7,21 @@ export class Racer {
   }
 
   go(){
-    this.distance.tofixed(0) = (Math.random() * (.95 - 0))*100
+    let 
+    array.forEach(racer => {
+      this.distance.tofixed(0) = (Math.random() * (.95 - 0))*100 +"%"
+      document.getElementById("santa").style.left =+ this.distance
+    });
   }
 
 get Template(){
-  return ``
+  return `
+  <div class="bg-dark m-3 p-2 col-12 position-relative">
+    <div class="racer" title="santa">
+      <span class="racer-icon position-absolute" id="santa">🎅</span>
+    </div>
+  </div>
+  `
 }
 // get is a method that you do not have to call, you can reference it by name to access the return at Racer.Template
 
